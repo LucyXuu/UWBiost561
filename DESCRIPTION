@@ -16,5 +16,6 @@ Suggests:
     ggplot2,
     testthat,
     readr,
-    utils
+    utils,
+    devtools
 VignetteBuilder: knitr
