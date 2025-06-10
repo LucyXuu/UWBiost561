@@ -78,4 +78,4 @@ save(density_trial_list,
      alpha,
      date_of_run,
      session_info,
-     file = "~/HW4_simulation.RData")
+     file = "HW4_simulation.RData")

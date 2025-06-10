@@ -193,19 +193,9 @@ result2
 6. The maximum time needed is 45 minutes, however it will take less time because most trial will not take the maximum 30 seconds.
 
 
-### Question 2C
+### Question 4
 
-```{r}
-imp_numbers <- 1:15
-trials <- 2
-clique_edge_density_vec <- c(0.3, 0.7)
-
-
-
-results <- simulation_study(trials, clique_edge_density_vec)
-```
-
-
+I will create data analyzing functions that can first clean the data and then perform different types of analysis, return them so users can compare between
 
 
 

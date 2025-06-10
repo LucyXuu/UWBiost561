@@ -8,4 +8,4 @@
 #SBATCH --mem-per-cpu=10gb
 
 # Run your R script
-R CMD BATCH --no-save --no-restore vignettes/HW4_simulation_execute.R
+R CMD BATCH --no-save --no-restore HW4_simulation_execute.R
