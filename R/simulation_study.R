@@ -16,9 +16,9 @@
 
 run_simulation <- function(trials,
                            clique_edge_density_vec,
-                           clique_fraction = 0.9,
+                           clique_fraction = 0.5,
                            n = 10,
-                           alpha = 0.9,
+                           alpha = 0.95,
                            time_limit = 2,
                            imp_numbers = 1:15) {
   library(UWBiost561)
@@ -27,9 +27,7 @@ run_simulation <- function(trials,
 
   for (density in clique_edge_density_vec) {
     cat("Running for clique_edge_density =", density, "\n")
-
     trial_list <- lapply(1:trials, function(trial) {
-      set.seed(trial)
       adj_mat <- UWBiost561::generate_partial_clique(
         n = n,
         clique_fraction = clique_fraction,
@@ -47,16 +45,17 @@ run_simulation <- function(trials,
             time_limit = time_limit
           )
 
-          validated_alpha <- if (!is.na(out$clique_idx)) {
+          validated_alpha <- if (!is.null(out$clique_idx)) {
             UWBiost561::compute_correct_density(adj_mat, out$clique_idx)
           } else {
             NA
           }
 
           out$validated_alpha <- validated_alpha
-          out
+          return(out)
         }, error = function(e) {
           list(
+            error = e,
             clique_idx = NULL,
             edge_density = NA,
             status = "error",
@@ -64,7 +63,6 @@ run_simulation <- function(trials,
             validated_alpha = NA
           )
         })
-
         return(result)
       })
 

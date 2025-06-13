@@ -55,6 +55,8 @@ print(result)
 
 ```{r}
 set.seed(10)
-sim_result <- run_simulation(trials=2, clique_edge_density_vec = c(0.95, 0.9), alpha = 0.95, time_limit = 30, imp_numbers = 1:3)
-print(sim_result$`clique_edge_density:0.3`$`Trial:1`$Method_1)
+
+sim_result <- run_simulation(trials=2, clique_edge_density_vec = c(0.95,0.5), alpha = 0.9, time_limit = 30, imp_numbers = 1:3)
+
+print(sim_result$`clique_edge_density:0.95`$`Trial:1`$Method_1)
 ```
