@@ -1,8 +1,24 @@
+#' run a simulation study on given functions that computes maximal partial clique for a given matrix
+#'
+#' @param trials number of trials to run for each setting each function
+#' @param clique_edge_density_vec  list of edge density among the nodes in the clique of the generated matrix
+#' @param clique_fraction fraction of the n nodes that are part of the partial clique of the generated matrix
+#' @param n number of nodes in the graph of the generated matrix
+#' @param alpha alpha level that the partial clique has to achieve
+#' @param time_limit maximum time in seconds each implementation can run for.
+#' @param imp_numbers which implementations to run simulation upon. Need to be between 1 and 15.
+#'
+#'
+#' @returns results of each implementation
+#' @example path.R
+#' @export
+
+
 run_simulation <- function(trials,
                            clique_edge_density_vec,
                            clique_fraction = 0.9,
                            n = 10,
-                           alpha = 0.7,
+                           alpha = 0.9,
                            time_limit = 2,
                            imp_numbers = 1:15) {
   library(UWBiost561)
