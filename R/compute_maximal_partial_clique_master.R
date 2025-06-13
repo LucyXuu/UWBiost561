@@ -20,6 +20,7 @@
 #'
 #' @return a list with `clique_idx`, `edge_density` (which are from the implementation itself)
 #' and `status` and `valid` (which are added by this function)
+#' @example compute_maximal_partial_clique_master(adj_mat = g$adj_mat, alpha = 0.9, number=11,time_limit = 10)
 #' @export
 compute_maximal_partial_clique_master <- function(adj_mat,
                                                   alpha,

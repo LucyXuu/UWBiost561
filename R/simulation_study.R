@@ -10,7 +10,7 @@
 #'
 #'
 #' @returns results of each implementation
-#' @example path.R
+#' @example run_simulation(trials=2, clique_edge_density_vec = c(0.95,0.5), time_limit = 30, imp_numbers = 1:3)
 #' @export
 
 

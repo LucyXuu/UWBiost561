@@ -5,6 +5,7 @@
 #' @param clique_edge_density the edge density among the nodes in the clique
 #'
 #' @returns a random adjacency matrix that you construct with the partial clique
+#' @example generate_partial_clique(n = 10, clique_fraction = 0.5, clique_edge_density = 0.95)
 #' @export
 
 generate_partial_clique <- function(n, clique_fraction, clique_edge_density){

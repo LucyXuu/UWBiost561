@@ -4,6 +4,9 @@
 #' @param alpha density that the partial clique needs to reach
 #'
 #' @returns returns a list of two things, the nodes in the maximal partial clique, and its density
+#'
+#' @example adj <- generate_partial_clique(n = 10, clique_fraction = 0.5, clique_edge_density = 0.95)
+#'          compute_maximal_partial_clique(adj, alpha=0.9)
 #' @export
 compute_maximal_partial_clique <- function(adj_mat, alpha) {
   if (!is.matrix(adj_mat) ||nrow(adj_mat) != ncol(adj_mat) || !all(adj_mat == t(adj_mat))) {
