@@ -19,8 +19,8 @@ devtools::install_github("LucyXuu/UWBiost561")
 
 Upon completion, you can run the following code (in R):
 ```R
-library(UWBiost561Example)
-UWBiost561Example::run_example()
+library(UWBiost561)
+UWBiost561::run_example()
 ```
 
 # Dependencies
